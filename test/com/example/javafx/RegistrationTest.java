@@ -10,13 +10,18 @@ class RegistrationTest {
 
     @BeforeEach
     void setUp() {
+
     }
 
     @AfterEach
     void tearDown() {
     }
 
+
     @Test
-    void start() {
+    void opensGUI() {
+        Registration registration = new Registration();
+        registration.start();
+
     }
 }
