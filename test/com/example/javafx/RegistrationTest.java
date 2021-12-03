@@ -18,10 +18,4 @@ class RegistrationTest {
     }
 
 
-    @Test
-    void opensGUI() {
-        Registration registration = new Registration();
-        registration.start();
-
-    }
 }
