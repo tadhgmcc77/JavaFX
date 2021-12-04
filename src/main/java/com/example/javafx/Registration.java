@@ -37,6 +37,13 @@ public class Registration extends Application {
         TextField userTextField = new TextField();
         grid.add(userTextField, 1, 1);
 
+        Label password = new Label("Password:");
+        grid.add(password, 0, 2);
+
+        PasswordField passBox = new PasswordField();
+        grid.add(passBox, 1, 2);
+
+
         Scene scene = new Scene(grid, 300, 275);
         primaryStage.setScene(scene);
 
