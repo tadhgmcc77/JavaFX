@@ -65,17 +65,7 @@ public class Registration extends Application {
             }
         });
 
-        Label password = new Label("Password:");
-        grid.add(password, 0, 2);
 
-        PasswordField passBox = new PasswordField();
-        grid.add(passBox, 1, 2);
-
-
-        Scene scene = new Scene(grid, 300, 275);
-        primaryStage.setScene(scene);
-
-        primaryStage.show();
     }
 
     public void validateEmail (String input) {
