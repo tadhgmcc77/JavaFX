@@ -54,17 +54,25 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent e) {
                 String email = emailTextField.getText();
-                String password = passBox.getText();;
+                String password = passBox.getText();
                 String output_message = "";
+                boolean error = false;
 
-                if (validate.emailValidate(email)) {
+                if (!validate.emailValidate(email)) {
                     output_message += "Email Address Invalid ";
+                    error = true;
                 }
-                if (validate.passwordValidate(password)) {
+                if (!validate.passwordValidate(password)) {
                     output_message += " Password Invalid";
+                    error = true;
                 }
 
-                actiontarget.setText(output_message);
+                if (!error) {
+                    actiontarget.setText("Successful Registration!");
+                }
+                else {
+                    actiontarget.setText(output_message);
+                }
             }
         });
 

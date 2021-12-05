@@ -1,10 +1,16 @@
 package com.example.javafx;
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class Registration {
 
     public boolean emailValidate(String input) {
         String email = input;
+
+
+        if (!wellFormed(email)) {
+            return false;
+        }
 
         return true;
     }
@@ -65,13 +71,17 @@ public class Registration {
 
     public boolean wellFormed (String input) {
         String email = input;
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
 
-        if (email.contains("@")) {
-            if (email.contains(".")) {
-                return true;
-            }
-        }
-        return false;
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null)
+            return false;
+
+        return pat.matcher(email).matches();
+
     }
 
     public static void main(String[] args) {
