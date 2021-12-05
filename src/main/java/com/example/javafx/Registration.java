@@ -76,14 +76,12 @@ public class Registration {
                 "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
                 "A-Z]{2,7}$";
 
-        Pattern pat = Pattern.compile(emailRegex);
+        Pattern emailPattern = Pattern.compile(emailRegex);
         if (email == null)
             return false;
 
-        return pat.matcher(email).matches();
+        return emailPattern.matcher(email).matches();
 
     }
 
-    public static void main(String[] args) {
-    }
 }
