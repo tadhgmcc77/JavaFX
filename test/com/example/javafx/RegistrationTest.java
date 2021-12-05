@@ -1,23 +1,13 @@
 package com.example.javafx;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class RegistrationTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
-    void WellFormedIsAccepted() {
+    public void WellFormedIsAccepted() {
     }
 
     @Test
@@ -27,6 +17,7 @@ class RegistrationTest {
 
     @Test
     void PasswordLengthIsAccepted() {
+        //passwordValidate passwordTester = new PasswordValidate;
     }
 
     @Test
@@ -59,4 +50,6 @@ class RegistrationTest {
     void PasswordContainsSpecialCharIsRejected() {
 
     }
+
+
 }
