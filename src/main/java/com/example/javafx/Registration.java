@@ -5,7 +5,6 @@ public class Registration {
 
     public boolean emailValidate(String input) {
         String email = input;
-        boolean current_return = true;
 
         return true;
     }
@@ -67,9 +66,14 @@ public class Registration {
     public boolean wellFormed (String input) {
         String email = input;
 
-
-        return true;
+        if (email.contains("@")) {
+            if (email.contains(".")) {
+                return true;
+            }
+        }
+        return false;
     }
+
     public static void main(String[] args) {
     }
 }

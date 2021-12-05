@@ -16,7 +16,9 @@ class RegistrationTest {
 
     @Test
     void badlyFormedIsRejected() {
-
+        Registration wellformed = new Registration();
+        assertFalse(wellformed.wellFormed("sgmailcom"));
+        assertFalse(wellformed.wellFormed("testexample.com"));
     }
 
     @Test
