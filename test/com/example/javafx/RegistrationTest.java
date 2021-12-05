@@ -19,7 +19,8 @@ class RegistrationTest {
     @Test
     void PasswordLengthIsAccepted() {
         Registration validateLength = new Registration();
-        assertTrue(validateLength.passwordValidate("12345678CHARS"));
+        assertTrue(validateLength.passwordValidate("1234567chars"));
+        assertTrue(validateLength.passwordValidate("11CHARACTERS"));
     }
     /*
     @Test

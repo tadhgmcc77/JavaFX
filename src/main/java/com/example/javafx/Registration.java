@@ -7,6 +7,13 @@ public class Registration {
     }
 
     public boolean passwordValidate(String input) {
-        return false;
+        String password = input;
+        boolean current_return = true;
+
+        if (password.length() < 7) {
+            current_return = false;
+        }
+
+        return current_return;
     }
 }
