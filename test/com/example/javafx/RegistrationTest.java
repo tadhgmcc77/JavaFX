@@ -30,24 +30,23 @@ class RegistrationTest {
         assertFalse(validateLength.passwordValidate("5char"));
     }
 
+    /*
     @Test
     void PasswordContainsLetterIsAccepted() {
-        Registration containsSpecialChar = new Registration();
-        assertFalse(containsSpecialChar.containsSpecialChar("has@"));
-        assertFalse(containsSpecialChar.containsSpecialChar("exclamation!"));
+
     }
 
     @Test
     void PasswordContainsLetterIsRejected() {
-        Registration containsSpecialChar = new Registration();
-        assertFalse(containsSpecialChar.passwordValidate("few"));
-        assertFalse(containsSpecialChar.passwordValidate("5char"));
 
     }
+*/
 
-/*
     @Test
     void PasswordContainsDigitIsAccepted() {
+        Registration containsDigit = new Registration();
+        assertTrue(containsDigit.containsSpecialChar("h11as"));
+        assertTrue(containsDigit.containsSpecialChar("ex1"));
     }
 
     @Test
@@ -56,13 +55,17 @@ class RegistrationTest {
 
     @Test
     void PasswordContainsSpecialCharIsAccepted() {
-
+        Registration containsSpecialChar = new Registration();
+        assertTrue(containsSpecialChar.containsSpecialChar("h@as"));
+        assertTrue(containsSpecialChar.containsSpecialChar("ex!clamation"));
     }
 
     @Test
     void PasswordContainsSpecialCharIsRejected() {
-
+        Registration containsSpecialChar = new Registration();
+        assertFalse(containsSpecialChar.passwordValidate("few"));
+        assertFalse(containsSpecialChar.passwordValidate("5char"));
     }
-*/
+
 
 }

@@ -35,11 +35,24 @@ public class Registration {
         String password = input;
         String[] specialChars = {"^","&","@","!"};
 
-        for (String character: specialChars) {
-            if (password.contains(character)) {
-                return false;
+        for (String i : specialChars) {
+            if (password.contains(i)) {
+                return true;
             }
         }
-       return true;
+       return false;
+    }
+
+    public boolean containsDigit (String input) {
+        String password = input;
+        String[] numbers = {"1","2","3","4"};
+
+        if (!password.matches(".*\\d.*")) {
+            return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
     }
 }
