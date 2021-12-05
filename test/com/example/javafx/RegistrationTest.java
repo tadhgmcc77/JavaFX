@@ -33,11 +33,17 @@ class RegistrationTest {
 
     @Test
     void PasswordContainsLetterIsAccepted() {
-
+        Registration containsLetter = new Registration();
+        assertTrue(containsLetter.containsLetter("h11as"));
+        assertTrue(containsLetter.containsLetter("ex1"));
     }
 
     @Test
     void PasswordContainsLetterIsRejected() {
+        Registration containsLetter = new Registration();
+        assertFalse(containsLetter.containsLetter("112233"));
+        assertFalse(containsLetter.containsLetter("@%&^**"));
+
 
     }
 

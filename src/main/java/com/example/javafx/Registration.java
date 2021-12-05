@@ -52,6 +52,15 @@ public class Registration {
         return true;
     }
 
+    public boolean containsLetter (String input) {
+        String password = input;
+
+        if (!password.matches(".*[a-zA-Z].*")) {
+            return false;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
     }
 }
