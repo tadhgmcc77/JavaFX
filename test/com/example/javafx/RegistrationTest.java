@@ -17,7 +17,7 @@ class RegistrationTest {
     }
 
     @Test
-    void checkEmailIsWellFormed() {
+    void WellFormedIsAccepted() {
     }
 
     @Test
@@ -26,19 +26,37 @@ class RegistrationTest {
     }
 
     @Test
-    void checkPasswordLength() {
+    void PasswordLengthIsAccepted() {
     }
 
     @Test
-    void checkPasswordContainsLetter() {
+    void PasswordLengthIsRejected() {
     }
 
     @Test
-    void checkPasswordContainsDigit() {
+    void PasswordContainsLetterIsAccepted() {
     }
 
     @Test
-    void checkPasswordContainsSpecialChar() {
+    void PasswordContainsLetterIsRejected() {
+    }
+
+
+    @Test
+    void PasswordContainsDigitIsAccepted() {
+    }
+
+    @Test
+    void PasswordContainsDigitIsRejected() {
+    }
+
+    @Test
+    void PasswordContainsSpecialCharIsAccepted() {
+
+    }
+
+    @Test
+    void PasswordContainsSpecialCharIsRejected() {
 
     }
 }
