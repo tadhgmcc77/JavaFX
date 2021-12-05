@@ -16,6 +16,7 @@ import java.io.IOException;
 import org.junit.*;
 
 
+
 public class Registration extends Application {
     @Override
     public void start(Stage primaryStage) {
@@ -30,7 +31,7 @@ public class Registration extends Application {
         Text scenetitle = new Text("Welcome");
         grid.add(scenetitle, 0, 0, 2, 1);
 
-        Label email = new Label("Email:");
+        Label email = new Label("email:");
         grid.add(email, 0, 1);
 
         TextField emailTextField = new TextField();
@@ -42,14 +43,14 @@ public class Registration extends Application {
         PasswordField passBox = new PasswordField();
         grid.add(passBox, 1, 2);
 
+        final Text actiontarget = new Text();
+        grid.add(actiontarget, 1, 6);
+
         Button btn = new Button("Sign in");
         HBox hbBtn = new HBox(10);
         hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
         hbBtn.getChildren().add(btn);
         grid.add(hbBtn, 1, 4);
-
-        final Text actiontarget = new Text();
-        grid.add(actiontarget, 1, 6);
 
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -65,18 +66,19 @@ public class Registration extends Application {
             }
         });
 
+        Scene scene = new Scene(grid, 300, 275);
+        primaryStage.setScene(scene);
 
+        primaryStage.show();
     }
 
-    public void validateEmail (String input) {
-
-    }
 
     public static void main(String[] args) {
         launch();
     }
 
 }
+
 
 
 
