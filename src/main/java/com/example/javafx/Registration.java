@@ -4,6 +4,9 @@ import java.util.*;
 public class Registration {
 
     public boolean emailValidate(String input) {
+        String email = input;
+        boolean current_return = true;
+
         return true;
     }
 
@@ -61,6 +64,12 @@ public class Registration {
         return true;
     }
 
+    public boolean wellFormed (String input) {
+        String email = input;
+
+
+        return true;
+    }
     public static void main(String[] args) {
     }
 }

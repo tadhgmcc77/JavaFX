@@ -8,7 +8,10 @@ class RegistrationTest {
 
 
     @Test
-    public void WellFormedIsAccepted() {
+     void WellFormedIsAccepted() {
+        Registration wellformed = new Registration();
+        assertTrue(wellformed.wellFormed("s@gmail.com"));
+        assertTrue(wellformed.wellFormed("test@example.com"));
     }
 
     @Test
@@ -43,10 +46,7 @@ class RegistrationTest {
         Registration containsLetter = new Registration();
         assertFalse(containsLetter.containsLetter("112233"));
         assertFalse(containsLetter.containsLetter("@%&^**"));
-
-
     }
-
 
     @Test
     void PasswordContainsDigitIsAccepted() {
