@@ -19,23 +19,33 @@ class RegistrationTest {
     @Test
     void PasswordLengthIsAccepted() {
         Registration validateLength = new Registration();
-        assertTrue(validateLength.passwordValidate("1234567chars"));
-        assertTrue(validateLength.passwordValidate("11CHARACTERS"));
+        assertTrue(validateLength.validateLength("1234567chars"));
+        assertTrue(validateLength.validateLength("11CHARACTERS"));
     }
-    /*
+
     @Test
     void PasswordLengthIsRejected() {
+        Registration validateLength = new Registration();
+        assertFalse(validateLength.passwordValidate("few"));
+        assertFalse(validateLength.passwordValidate("5char"));
     }
 
     @Test
     void PasswordContainsLetterIsAccepted() {
+        Registration containsSpecialChar = new Registration();
+        assertFalse(containsSpecialChar.containsSpecialChar("few@"));
+        assertFalse(containsSpecialChar.containsSpecialChar("5char!"));
     }
 
     @Test
     void PasswordContainsLetterIsRejected() {
+        Registration containsSpecialChar = new Registration();
+        assertFalse(containsSpecialChar.passwordValidate("few"));
+        assertFalse(containsSpecialChar.passwordValidate("5char"));
+
     }
 
-
+/*
     @Test
     void PasswordContainsDigitIsAccepted() {
     }
