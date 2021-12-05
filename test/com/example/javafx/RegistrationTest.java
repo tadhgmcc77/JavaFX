@@ -33,8 +33,8 @@ class RegistrationTest {
     @Test
     void PasswordContainsLetterIsAccepted() {
         Registration containsSpecialChar = new Registration();
-        assertFalse(containsSpecialChar.containsSpecialChar("few@"));
-        assertFalse(containsSpecialChar.containsSpecialChar("5char!"));
+        assertFalse(containsSpecialChar.containsSpecialChar("has@"));
+        assertFalse(containsSpecialChar.containsSpecialChar("exclamation!"));
     }
 
     @Test
