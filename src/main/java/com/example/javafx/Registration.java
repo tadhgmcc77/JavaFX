@@ -45,7 +45,6 @@ public class Registration {
 
     public boolean containsDigit (String input) {
         String password = input;
-        String[] numbers = {"1","2","3","4"};
 
         if (!password.matches(".*\\d.*")) {
             return false;

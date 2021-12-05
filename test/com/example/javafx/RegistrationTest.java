@@ -45,12 +45,15 @@ class RegistrationTest {
     @Test
     void PasswordContainsDigitIsAccepted() {
         Registration containsDigit = new Registration();
-        assertTrue(containsDigit.containsSpecialChar("h11as"));
-        assertTrue(containsDigit.containsSpecialChar("ex1"));
+        assertTrue(containsDigit.containsDigit("h11as"));
+        assertTrue(containsDigit.containsDigit("ex1"));
     }
 
     @Test
     void PasswordContainsDigitIsRejected() {
+        Registration containsDigit = new Registration();
+        assertFalse(containsDigit.containsDigit("nonumber"));
+        assertFalse(containsDigit.containsDigit("example"));
     }
 
     @Test
