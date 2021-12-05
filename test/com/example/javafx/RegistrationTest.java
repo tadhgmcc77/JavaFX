@@ -30,7 +30,7 @@ class RegistrationTest {
         assertFalse(validateLength.passwordValidate("5char"));
     }
 
-    /*
+
     @Test
     void PasswordContainsLetterIsAccepted() {
 
@@ -40,7 +40,7 @@ class RegistrationTest {
     void PasswordContainsLetterIsRejected() {
 
     }
-*/
+
 
     @Test
     void PasswordContainsDigitIsAccepted() {
