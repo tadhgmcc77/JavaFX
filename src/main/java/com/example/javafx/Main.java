@@ -11,10 +11,16 @@ import javafx.scene.layout.*;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
 
-
+/**
+ * Main class for running the application
+ */
 public class Main extends Application {
     Registration validate = new Registration();
 
+    /**
+     * Creates and runs GUI
+     * @param primaryStage Stage for GUI
+     */
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("User Registration");
@@ -51,6 +57,10 @@ public class Main extends Application {
 
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
+            /**
+             * Handles buttonclick event
+             * @param e event
+             */
             @Override
             public void handle(ActionEvent e) {
                 String email = emailTextField.getText();

@@ -2,8 +2,16 @@ package com.example.javafx;
 import java.util.*;
 import java.util.regex.Pattern;
 
+/**
+ * Registration class to register users
+ */
 public class Registration {
 
+    /**
+     * Validates user inputted emails
+     * @param input Email input by user
+     * @return Boolean for whether email is accepted
+     */
     public boolean emailValidate(String input) {
         String email = input;
 
@@ -15,6 +23,11 @@ public class Registration {
         return true;
     }
 
+    /**
+     * Validates user inputted passwords
+     * @param input password input by user
+     * @return Boolean for whether password is accepted
+     */
     public boolean passwordValidate(String input) {
         String password = input;
         boolean current_return = true;
@@ -29,6 +42,11 @@ public class Registration {
         return current_return;
     }
 
+    /**
+     * Validates length of password
+     * @param input  password input by user
+     * @return boolean
+     */
     public boolean validateLength (String input) {
         String password = input;
 
@@ -39,6 +57,11 @@ public class Registration {
         else return true;
     }
 
+    /**
+     * Validates if passwords have special characters
+     * @param input password input
+     * @return boolean
+     */
     public boolean containsSpecialChar (String input) {
         String password = input;
         String[] specialChars = {"^","&","@","!"};
@@ -50,7 +73,11 @@ public class Registration {
         }
        return false;
     }
-
+    /**
+     * Validates if passwords have a digit
+     * @param input password input
+     * @return boolean
+     */
     public boolean containsDigit (String input) {
         String password = input;
 
@@ -59,7 +86,11 @@ public class Registration {
         }
         return true;
     }
-
+    /**
+     * Validates if passwords have a letter
+     * @param input password input
+     * @return boolean
+     */
     public boolean containsLetter (String input) {
         String password = input;
 
@@ -68,7 +99,11 @@ public class Registration {
         }
         return true;
     }
-
+    /**
+     * Validates if email is well-formed
+     * @param input email input
+     * @return boolean
+     */
     public boolean wellFormed (String input) {
         String email = input;
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
