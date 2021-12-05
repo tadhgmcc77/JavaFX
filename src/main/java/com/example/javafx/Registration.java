@@ -56,13 +56,18 @@ public class Registration extends Application {
 
             @Override
             public void handle(ActionEvent e) {
-                String username;
-                String password;
+                String email = emailTextField.getText();
+                String password = passBox.getText();;
+                String output_message = "";
 
-                username = emailTextField.getText();
-                password = passBox.getText();
+                if (emailValidate(email)) {
+                    output_message += "Email Address Invalid ";
+                }
+                if (passwordValidate(password)) {
+                    output_message += " Password Invalid";
+                }
 
-                actiontarget.setText(password + username);
+                actiontarget.setText(output_message);
             }
         });
 
@@ -70,6 +75,14 @@ public class Registration extends Application {
         primaryStage.setScene(scene);
 
         primaryStage.show();
+    }
+
+    public boolean emailValidate(String input) {
+        return true;
+    }
+
+    public boolean passwordValidate(String input) {
+        return true;
     }
 
 
