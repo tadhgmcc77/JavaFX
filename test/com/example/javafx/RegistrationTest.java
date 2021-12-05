@@ -74,8 +74,17 @@ class RegistrationTest {
     @Test
     void PasswordContainsSpecialCharIsRejected() {
         Registration containsSpecialChar = new Registration();
-        assertFalse(containsSpecialChar.passwordValidate("few"));
-        assertFalse(containsSpecialChar.passwordValidate("5char"));
+        assertFalse(containsSpecialChar.containsSpecialChar("few"));
+        assertFalse(containsSpecialChar.containsSpecialChar("5char"));
+    }
+
+    @Test
+    void weakPasswordRejected() {
+        Registration weakPassword = new Registration();
+        assertFalse(weakPassword.passwordValidate("123"));
+        assertFalse(weakPassword.passwordValidate("nospecialchar"));
+        assertFalse(weakPassword.passwordValidate("nonumber"));
+
     }
 
 
