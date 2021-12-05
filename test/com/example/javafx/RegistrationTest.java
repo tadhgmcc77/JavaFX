@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RegistrationTest {
 
+
     @Test
     public void WellFormedIsAccepted() {
     }
@@ -17,9 +18,10 @@ class RegistrationTest {
 
     @Test
     void PasswordLengthIsAccepted() {
-        //passwordValidate passwordTester = new PasswordValidate;
+        Registration validateLength = new Registration();
+        assertTrue(validateLength.passwordValidate("12345678CHARS"));
     }
-
+    /*
     @Test
     void PasswordLengthIsRejected() {
     }
@@ -50,6 +52,6 @@ class RegistrationTest {
     void PasswordContainsSpecialCharIsRejected() {
 
     }
-
+*/
 
 }
