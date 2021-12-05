@@ -52,7 +52,7 @@ class RegistrationTest {
     @Test
     void PasswordContainsDigitIsRejected() {
         Registration containsDigit = new Registration();
-        assertFalse(containsDigit.containsDigit("nonumber"));
+        assertFalse(containsDigit.containsDigit("noneumber"));
         assertFalse(containsDigit.containsDigit("example"));
     }
 
