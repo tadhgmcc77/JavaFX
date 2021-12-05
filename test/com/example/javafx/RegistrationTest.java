@@ -10,12 +10,35 @@ class RegistrationTest {
 
     @BeforeEach
     void setUp() {
-
     }
 
     @AfterEach
     void tearDown() {
     }
 
+    @Test
+    void checkEmailIsWellFormed() {
+    }
 
+    @Test
+    void badlyFormedIsRejected() {
+
+    }
+
+    @Test
+    void checkPasswordLength() {
+    }
+
+    @Test
+    void checkPasswordContainsLetter() {
+    }
+
+    @Test
+    void checkPasswordContainsDigit() {
+    }
+
+    @Test
+    void checkPasswordContainsSpecialChar() {
+
+    }
 }
